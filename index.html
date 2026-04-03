@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fabiola Castaneda — Dog &amp; Cat Walker · Toronto Midtown</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: #FFF8F0; color: #3A2000; }
+  header { background: #F9A825; padding: 48px 24px 36px; text-align: center; }
+  .paws-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 14px; }
+  .paw-svg { width: 22px; height: 22px; opacity: 0.5; }
+  h1 { font-family: 'Fredoka One', sans-serif; font-size: clamp(28px, 6vw, 42px); color: #3A2000; line-height: 1.1; }
+  .role-badge { display: inline-block; background: #FFD54F; color: #7A4800; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin: 10px 0 14px; }
+  .tagline { font-size: 16px; color: #5D3A00; font-weight: 600; font-style: italic; }
+  .meet-greet-bar { background: #1D9E75; padding: 16px 24px; text-align: center; }
+  .meet-greet-bar .mg-title { font-size: 17px; font-weight: 800; color: #E1F5EE; margin-bottom: 4px; }
+  .meet-greet-bar .mg-sub { font-size: 13px; color: #9FE1CB; font-weight: 600; }
+  .cta-bar { background: #3A2000; padding: 20px 24px; text-align: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #F9A825; color: #3A2000; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; text-decoration: none; padding: 12px 24px; border-radius: 30px; border: none; cursor: pointer; transition: background 0.2s; }
+  .cta-btn:hover { background: #FFD54F; }
+  .cta-btn.outline { background: transparent; color: #F9A825; border: 2px solid #F9A825; }
+  .cta-btn.outline:hover { background: #F9A825; color: #3A2000; }
+  section { max-width: 640px; margin: 0 auto; padding: 40px 24px; }
+  h2 { font-family: 'Fredoka One', sans-serif; font-size: 26px; color: #3A2000; margin-bottom: 20px; }
+  .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px; }
+  .label-dog { background: #FFF3E0; color: #7A4800; }
+  .label-cat { background: #FCE4EC; color: #880E4F; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .service-card { background: #fff; border: 2px solid #F0C080; border-radius: 14px; padding: 18px 16px; }
+  .service-card.cat { border-color: #F48FB1; }
+  .service-icon { font-size: 28px; margin-bottom: 8px; }
+  .service-name { font-weight: 800; font-size: 15px; color: #3A2000; margin-bottom: 4px; }
+  .service-desc { font-size: 12px; color: #7A5820; line-height: 1.5; margin-bottom: 10px; }
+  .price-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .price-pill { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 8px; }
+  .price-pill.dog { background: #FFF3E0; color: #7A4800; border: 1.5px solid #F9A825; }
+  .price-pill.cat { background: #FCE4EC; color: #880E4F; border: 1.5px solid #F48FB1; }
+  .meet-greet-card { background: #E1F5EE; border: 2px solid #5DCAA5; border-radius: 14px; padding: 20px 22px; display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+  .mg-icon { width: 44px; height: 44px; background: #1D9E75; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .mg-icon svg { width: 22px; height: 22px; }
+  .mg-title { font-weight: 800; font-size: 16px; color: #085041; margin-bottom: 4px; }
+  .mg-desc { font-size: 13px; color: #0F6E56; line-height: 1.6; }
+  .why-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .why-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #3A2000; line-height: 1.5; }
+  .why-dot { width: 22px; height: 22px; background: #F9A825; border-radius: 50%; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
+  .contact-card { background: #F9A825; border-radius: 18px; padding: 28px 24px; }
+  .contact-card h2 { color: #3A2000; }
+  .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .c-icon { width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .c-label { font-size: 11px; color: #7A4800; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .c-value { font-size: 16px; font-weight: 800; color: #3A2000; }
+  .c-link { color: #3A2000; text-decoration: none; }
+  .c-link:hover { text-decoration: underline; }
+  footer { background: #3A2000; color: #F0C080; text-align: center; padding: 20px 24px; font-size: 13px; }
+  .footer-paws { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; opacity: 0.4; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="paws-row">
+    <svg class="paw-svg" viewBox="0 0 30 30" fill="#3A2000"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
+    <svg class="paw-svg" viewBox="0 0 30 30" fill="#3A2000"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
+    <svg class="paw-svg" viewBox="0 0 30 30" fill="#3A2000"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
+  </div>
+  <h1>Fabiola Castaneda</h1>
+  <div class="role-badge">Dog &amp; Cat Walker · Pet Sitter · Toronto Midtown</div>
+  <p class="tagline">"Your pet's favourite part of the day!"</p>
+</header>
+
+<div class="meet-greet-bar">
+  <div class="mg-title">&#10003; Free meet &amp; greet included</div>
+  <div class="mg-sub">Let's get acquainted before we start — no obligation, no commitment</div>
+</div>
+
+<div class="cta-bar">
+  <a href="tel:6478234713" class="cta-btn">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#3A2000" stroke-width="2"><path d="M3 2h3l1.5 3.5L6 7s1 2 3 3l1.5-1.5L14 10v3c-8 1-12-6-11-11z"/></svg>
+    Call now
+  </a>
+  <a href="mailto:fabiscg79@gmail.com" class="cta-btn outline">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="2"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 3l6 5 6-5"/></svg>
+    Send a message
+  </a>
+</div>
+
+<section>
+  <h2>Services &amp; pricing</h2>
+
+  <div class="meet-greet-card">
+    <div class="mg-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </div>
+    <div>
+      <div class="mg-title">Free meet &amp; greet</div>
+      <div class="mg-desc">Before we start, I come to you for a relaxed, no-obligation visit. Your pet and I get to know each other, we go over routines and preferences, and you can ask me anything. It's the best way to make sure it's a great fit — for you and your furry family member.</div>
+    </div>
+  </div>
+
+  <div class="section-label label-dog">&#x1F43E; Dog services</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#x1F9AE;</div>
+      <div class="service-name">Solo walk</div>
+      <div class="service-desc">One-on-one, full attention, tailored pace — just for your dog.</div>
+      <div class="price-row">
+        <span class="price-pill dog">$25 / 30 min</span>
+        <span class="price-pill dog">$33 / 45 min</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F415;</div>
+      <div class="service-name">Semi-private walk</div>
+      <div class="service-desc">Small group of 2–3 dogs — social, fun, and more affordable.</div>
+      <div class="price-row">
+        <span class="price-pill dog">$18 / 30 min</span>
+        <span class="price-pill dog">$25 / 45 min</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F3E0;</div>
+      <div class="service-name">Dog drop-in visit</div>
+      <div class="service-desc">Home check-in for feeding, play time, and potty breaks.</div>
+      <div class="price-row">
+        <span class="price-pill dog">$20 / 30 min</span>
+        <span class="price-pill dog">$28 / 45 min</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label label-cat">&#x1F431; Cat services</div>
+  <div class="services-grid">
+    <div class="service-card cat">
+      <div class="service-icon">&#x1F408;</div>
+      <div class="service-name">Cat drop-in visit</div>
+      <div class="service-desc">Feeding, fresh water, litter scooping, play, and cuddles while you're away.</div>
+      <div class="price-row">
+        <span class="price-pill cat">$18 / 30 min</span>
+        <span class="price-pill cat">$25 / 45 min</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <h2>Why choose Fabiola?</h2>
+  <ul class="why-list">
+    <li>
+      <div class="why-dot"><svg viewBox="0 0 12 12" fill="none" stroke="#3A2000" stroke-width="2"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span>Free meet &amp; greet so your pet is comfortable from day one</span>
+    </li>
+    <li>
+      <div class="why-dot"><svg viewBox="0 0 12 12" fill="none" stroke="#3A2000" stroke-width="2"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span>Serving Toronto Midtown pet families with genuine love and care</span>
+    </li>
+    <li>
+      <div class="why-dot"><svg viewBox="0 0 12 12" fill="none" stroke="#3A2000" stroke-width="2"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span>Photo updates sent after every walk or visit</span>
+    </li>
+    <li>
+      <div class="why-dot"><svg viewBox="0 0 12 12" fill="none" stroke="#3A2000" stroke-width="2"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span>Flexible scheduling to fit your routine</span>
+    </li>
+    <li>
+      <div class="why-dot"><svg viewBox="0 0 12 12" fill="none" stroke="#3A2000" stroke-width="2"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span>Your pet is treated like family, every single time</span>
+    </li>
+  </ul>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="contact-card">
+    <h2>Get in touch</h2>
+    <br/>
+    <div class="contact-row">
+      <div class="c-icon">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="1.8"><path d="M3 2h3l1.5 3.5L6 7s1 2 3 3l1.5-1.5L14 10v3c-8 1-12-6-11-11z"/></svg>
+      </div>
+      <div>
+        <div class="c-label">Phone</div>
+        <a href="tel:6478234713" class="c-link c-value">647-823-4713</a>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="c-icon">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="1.8"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 3l6 5 6-5"/></svg>
+      </div>
+      <div>
+        <div class="c-label">Email</div>
+        <a href="mailto:fabiscg79@gmail.com" class="c-link c-value">fabiscg79@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-paws">
+    <svg width="16" height="16" viewBox="0 0 30 30" fill="#F0C080"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
+    <svg width="16" height="16" viewBox="0 0 30 30" fill="#F0C080"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
+    <svg width="16" height="16" viewBox="0 0 30 30" fill="#F0C080"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
+  </div>
+  Fabiola Castaneda &middot; Dog &amp; Cat Walker &middot; Toronto Midtown, ON
+</footer>
+
+</body>
+</html>
