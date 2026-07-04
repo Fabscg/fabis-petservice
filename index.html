@@ -21,17 +21,16 @@
   .carousel-images > * { position: relative; z-index: 1; }
   .carousel-size { max-width: 500px; margin: 0 auto; padding: 0px 24px; }
   .cred { background: #fff; color: #7A4800; font-size: 18px; font-weight: 800; padding: 4px 12px; border-radius: 20px; border: 1.5px solid #F0C080; }
-  .carousel-item, img { width: 100%; height: 300px; object-fit:cover; border-radius: 50px 0 50px 0;  }
+  .carousel-item img { width: 100%; height: 300px; object-fit: cover; border-radius: 50px 0 50px 0; }
   .meet-greet-bar { background: #FFD54F; padding: 14px 24px; text-align: center; }
   .meet-greet-bar .mg-title { font-size: 20px; font-weight: 800; color: #7A4800; margin-bottom: 3px; }
   .meet-greet-bar .mg-sub { font-size: 18px; color: #7A4800; font-weight: 600; }
-  .carousel-size { width:max-content }
   .cta-bar { background: black; padding: 18px 24px; text-align: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
   .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #833AB4; color: #3A2000; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 18px; text-decoration: none; padding: 12px 22px; border-radius: 30px; border: none; cursor: pointer; transition: background 0.2s; }
   .cta-btn:hover { background: #FFD54F; }
   .cta-btn.outline { background: #FFD54F; color: #833AB4; border: 2px solid #833AB4; }
   .cta-btn.outline:hover { background: #833AB4; color: #3A2000; }
-  section { max-width: 450px; margin: 0 auto; padding: 40px 24px; }
+  section { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
   h2 { font-family: 'Unkempt', sans-serif; font-size: 26px; color: #3A2000; margin-bottom: 20px; }
   .section-label { display: inline-block; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px; }
   .label-dog { background: #FFF3E0; color: #7A4800; }
@@ -63,6 +62,46 @@
   .c-link:hover { text-decoration: underline; }
   footer { background: black; color: #F0C080; text-align: center; padding: 20px 24px; font-size: 16px; }
   .footer-paws { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; opacity: 0.4; }
+  /* Mobile — small phones */
+/* Mobile — small phones */
+@media (max-width: 575px) {
+  header { padding: 28px 16px 20px; }
+
+  .cred { font-size: 14px; }
+
+  .cta-btn { font-size: 15px; padding: 10px 16px; }
+
+  .services-grid { grid-template-columns: 1fr; }
+
+  .service-desc { font-size: 15px; }
+
+  .meet-greet-card { flex-direction: column; }
+
+  .carousel-size { max-width: 100%; padding: 0 12px; }
+
+  .carousel-item img { height: 220px; }
+
+  .why-list li { font-size: 15px; }
+}
+
+/* Mobile — large phones */
+@media (max-width: 767px) {
+  .carousel-size { max-width: 100%; }
+  .carousel-item img { height: 260px; }
+}
+
+/* Tablet / iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel-size { max-width: 600px; }
+  .carousel-item img { height: 320px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .carousel-size { max-width: 700px; }
+  .carousel-item img { height: 400px; }
+}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
