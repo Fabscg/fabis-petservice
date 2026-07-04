@@ -6,29 +6,34 @@
 <title>Furry Paws TO — Dog Walking &amp; Pet Sitting · Toronto Midtown</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Mansalva&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Mansalva&family=Unkempt:wght@400;700&display=swap" rel="stylesheet"><style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Nunito', sans-serif; background: #FFF8F0; color: #3A2000; }
-  header { background: #F9A825; padding: 48px 24px 32px; text-align: center; }
+  body { font-family: 'Nunito', sans-serif; background: #fff; color: #3A2000; }
+  header { background: #833AB4; padding: 48px 24px 32px; text-align: center; background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%); }
   .paws-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 12px; }
   .paw-svg { width: 22px; height: 22px; opacity: 0.5; }
-  h1 { font-family: 'Mansalva', sans-serif; font-size: clamp(32px, 7vw, 48px); color: #3A2000; line-height: 1.1; }
+  h1 { font-family: 'Unkempt', sans-serif; font-size: clamp(32px, 7vw, 48px); color: #3A2000; line-height: 1.1; }
   .role-badge { display: inline-block; background: #FFD54F; color: #7A4800; font-size: 14px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin: 10px 0 14px; }
   .cred-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 4px; }
+  .carousel-images { position: relative; background: black; }
+  .carousel-images::before { content: '';position: absolute; inset: 0; background-image: url("src/images/bubbles.jpg"); background-repeat: no-repeat; background-size: cover; opacity: 0.5; z-index: 0; }
+  .carousel-images > * { position: relative; z-index: 1; }
+  .carousel-size { max-width: 500px; margin: 0 auto; padding: 0px 24px; }
   .cred { background: #fff; color: #7A4800; font-size: 18px; font-weight: 800; padding: 4px 12px; border-radius: 20px; border: 1.5px solid #F0C080; }
-  .meet-greet-bar { background: #1D9E75; padding: 14px 24px; text-align: center; }
-  .meet-greet-bar .mg-title { font-size: 20px; font-weight: 800; color: #E1F5EE; margin-bottom: 3px; }
-  .meet-greet-bar .mg-sub { font-size: 18px; color: #9FE1CB; font-weight: 600; }
-  .cta-bar { background: #3A2000; padding: 18px 24px; text-align: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #F9A825; color: #3A2000; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 18px; text-decoration: none; padding: 12px 22px; border-radius: 30px; border: none; cursor: pointer; transition: background 0.2s; }
+  .carousel-item, img { width: 100%; height: 300px; object-fit:cover; border-radius: 50px 0 50px 0;  }
+  .meet-greet-bar { background: #FFD54F; padding: 14px 24px; text-align: center; }
+  .meet-greet-bar .mg-title { font-size: 20px; font-weight: 800; color: #7A4800; margin-bottom: 3px; }
+  .meet-greet-bar .mg-sub { font-size: 18px; color: #7A4800; font-weight: 600; }
+  .carousel-size { width:max-content }
+  .cta-bar { background: black; padding: 18px 24px; text-align: center; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #833AB4; color: #3A2000; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 18px; text-decoration: none; padding: 12px 22px; border-radius: 30px; border: none; cursor: pointer; transition: background 0.2s; }
   .cta-btn:hover { background: #FFD54F; }
-  .cta-btn.outline { background: transparent; color: #F9A825; border: 2px solid #F9A825; }
-  .cta-btn.outline:hover { background: #F9A825; color: #3A2000; }
-  section { max-width: 640px; margin: 0 auto; padding: 40px 24px; }
-  h2 { font-family: 'Mansalva', sans-serif; font-size: 26px; color: #3A2000; margin-bottom: 20px; }
-  .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px; }
+  .cta-btn.outline { background: #FFD54F; color: #833AB4; border: 2px solid #833AB4; }
+  .cta-btn.outline:hover { background: #833AB4; color: #3A2000; }
+  section { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+  h2 { font-family: 'Unkempt', sans-serif; font-size: 26px; color: #3A2000; margin-bottom: 20px; }
+  .section-label { display: inline-block; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 16px; }
   .label-dog { background: #FFF3E0; color: #7A4800; }
   .label-cat { background: #FCE4EC; color: #880E4F; }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-bottom: 28px; }
@@ -39,26 +44,28 @@
   .service-desc { font-size: 18px; color: #7A5820; line-height: 1.5; margin-bottom: 10px; }
   .price-row { display: flex; gap: 8px; flex-wrap: wrap; }
   .price-pill { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 8px; }
-  .price-pill.dog { background: #FFF3E0; color: #7A4800; border: 1.5px solid #F9A825; }
+  .price-pill.dog { background: #FFF3E0; color: #7A4800; border: 1.5px solid #833AB4; }
   .price-pill.cat { background: #FCE4EC; color: #880E4F; border: 1.5px solid #F48FB1; }
   .meet-greet-card { background: #E1F5EE; border: 2px solid #5DCAA5; border-radius: 14px; padding: 20px 22px; display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
-  .mg-icon { width: 44px; height: 44px; background: #1D9E75; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .mg-card-title { font-weight: 800; font-size: 16px; color: #085041; margin-bottom: 4px; }
-  .mg-desc { font-size: 13px; color: #0F6E56; line-height: 1.6; }
+  .mg-icon { width: 44px; height: 44px; background: #FFD54F; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .mg-card-title { font-weight: 800; font-size: 18px; color: #085041; margin-bottom: 4px; }
+  .mg-desc { font-size: 15px; color: #0F6E56; line-height: 1.6; }
   .why-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .why-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #3A2000; line-height: 1.5; }
-  .why-dot { width: 22px; height: 22px; background: #F9A825; border-radius: 50%; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
-  .contact-card { background: #F9A825; border-radius: 18px; padding: 28px 24px; }
-  .contact-card h2 { color: #3A2000; }
+  .why-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 18px; color: #3A2000; line-height: 1.5; }
+  .why-dot { width: 22px; height: 22px; background: #FFD54F; border-radius: 50%; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
+  .contact-card { background: #FFD54F; border-radius: 18px; padding: 28px 24px; }
+  .contact-card h2 { color: #880E4F; }
   .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
   .c-icon { width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .c-label { font-size: 14px; color: #7A4800; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .c-label { font-size: 14px; color: #880E4F; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
   .c-value { font-size: 18px; font-weight: 800; color: #3A2000; }
-  .c-link { color: #3A2000; text-decoration: none; }
+  .c-link { color: #880E4F; text-decoration: none; }
   .c-link:hover { text-decoration: underline; }
-  footer { background: #3A2000; color: #F0C080; text-align: center; padding: 20px 24px; font-size: 16px; }
+  footer { background: black; color: #F0C080; text-align: center; padding: 20px 24px; font-size: 16px; }
   .footer-paws { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; opacity: 0.4; }
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -88,7 +95,7 @@
     Call now
   </a>
   <a href="mailto:info@furrypawstoronto.ca" class="cta-btn outline">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="2"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 3l6 5 6-5"/></svg>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#3A2000" stroke-width="2"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 3l6 5 6-5"/></svg>
     Email us
   </a>
 </div>
@@ -151,7 +158,54 @@
   </div>
 </section>
 
-<section style="padding-top: 0;">
+<section class="carousel-images">
+  <div class="carousel-size">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+  
+        <div class="carousel-item active">
+          <img src="src/images/Charlie_Bailey.jpeg" class="d-block" alt="cat">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/Kacper.jpeg" class="d-block" alt="cat">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/Mona.jpg" class="d-block" alt="cat">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/kacper2.jpeg" class="d-block" alt="pets">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/Lincoln.jpeg" class="d-block" alt="petsitting">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/Sasha_and_I.jpeg" class="d-block" alt="pets">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/sebas.jpg" class="d-block" alt="pets">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/Otis.jpg" class="d-block" alt="pets">
+        </div>
+        <div class="carousel-item">
+          <img src="src/images/Bakush.jpg" class="d-block" alt="pets">
+        </div>
+  
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+ 
+</section>
+
+<section style="padding-top: 30px;">
   <h2>Why choose Furry Paws TO?</h2>
   <ul class="why-list">
     <li>
@@ -182,21 +236,21 @@
     <h2>Get in touch</h2>
     <br/>
     <div class="contact-row">
-      <div class="c-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="1.8"><path d="M3 2h3l1.5 3.5L6 7s1 2 3 3l1.5-1.5L14 10v3c-8 1-12-6-11-11z"/></svg></div>
+      <div class="c-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#833AB4" stroke-width="2"><path d="M3 2h3l1.5 3.5L6 7s1 2 3 3l1.5-1.5L14 10v3c-8 1-12-6-11-11z"/></svg></div>
       <div>
         <div class="c-label">Phone</div>
         <a href="tel:6478234718" class="c-link c-value">647-823-4718</a>
       </div>
     </div>
     <div class="contact-row">
-      <div class="c-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="1.8"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 3l6 5 6-5"/></svg></div>
+      <div class="c-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#833AB4" stroke-width="1.8"><rect x="2" y="3" width="12" height="10" rx="1"/><path d="M2 3l6 5 6-5"/></svg></div>
       <div>
         <div class="c-label">Email</div>
         <a href="mailto:info@furrypawstoronto.ca" class="c-link c-value">info@furrypawstoronto.ca</a>
       </div>
     </div>
     <div class="contact-row">
-      <div class="c-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#F9A825" stroke-width="1.8"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r="0.5" fill="#F9A825"/></svg></div>
+      <div class="c-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#833AB4" stroke-width="1.8"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r="0.5" fill="#833AB4"/></svg></div>
       <div>
         <div class="c-label">Instagram</div>
         <a href="https://www.instagram.com/furrypawsto/" class="c-link c-value">@FurryPawsTO</a>
@@ -211,7 +265,7 @@
     <svg width="16" height="16" viewBox="0 0 30 30" fill="#F0C080"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
     <svg width="16" height="16" viewBox="0 0 30 30" fill="#F0C080"><ellipse cx="15" cy="22" rx="8" ry="6"/><ellipse cx="7" cy="14" rx="4" ry="5"/><ellipse cx="23" cy="14" rx="4" ry="5"/><ellipse cx="11" cy="8" rx="3.5" ry="4"/><ellipse cx="19" cy="8" rx="3.5" ry="4"/></svg>
   </div>
-  Furry Paws TO &middot; Dog Walking &amp; Pet Sitting &middot; Toronto Midtown, ON
+  Furry Paws TO &middot; Dog Walking &amp; Pet Sitting &middot; Toronto Downtown, ON
 </footer>
 
 </body>
